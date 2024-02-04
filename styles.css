@@ -76,10 +76,9 @@ p {
 }
 
 hr {
-    border: none;
-    border-top: 1px solid var(--light-grey);
-    margin-block: 2rem;
-
+	border: none;
+	border-top: 1px solid var(--light-grey);
+	margin-block: 2rem;
 }
 
 .container {
@@ -91,85 +90,65 @@ hr {
 }
 
 .header {
-    text-align: justify;
-    margin-bottom: 2rem;
+	text-align: justify;
+	margin-bottom: 2rem;
 
-    & .img-header {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
+	& .img-header {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
 }
 
 .preparation-section {
 	padding-block: 0.1rem;
-    padding-inline: 1rem;
+	padding-inline: 1rem;
 	background-color: rgba(139, 0, 58, 0.1);
 	border-radius: 10px;
-    margin-inline: 0.5rem;
+	margin-inline: 0.5rem;
 
-	& ul {
-		list-style: none;
+	& li {
+		padding-left: 10px;
 	}
 
-	& li::before {
-		content: "•"; /* Unicode character for bullet */
+	& li::marker {
 		color: var(--dark-raspberry);
-		display: inline-block;
-		width: 1rem; /* Ensure that the bullet aligns nicely with the text */
-		margin-left: -2rem; /* Adjust positioning as needed */
 	}
 }
 
 .ingredients-section {
-	& ul {
-		list-style: none;
+
+	& li {
+		padding-left: 20px;
 	}
 
-	& li::before {
-		content: "•"; /* Unicode character for bullet */
+	& li::marker {
 		color: var(--nutmeg);
-		display: inline-block;
-		width: 2rem; /* Ensure that the bullet aligns nicely with the text */
-		margin-left: -2rem; /* Adjust positioning as needed */
 	}
 }
 
 .instructions-section {
-	& ol {
-		list-style: none;
-		counter-reset: li;
-	}
 
-	& li::before {
-		content: counter(li) "."; /* Unicode character for bullet */
+
+	& li::marker {
 		color: var(--nutmeg);
-		display: inline-block;
-        font-size: 1rem;
-		width: 2em;
-		margin-left: -2rem;
+		font-size: 1.1rem;
 	}
 
-    & li {
-        counter-increment: li;
-    }
-}
-
-.attribution {
-	font-size: 11px;
-	text-align: center;
-}
-.attribution a {
-	color: hsl(228, 45%, 44%);
+	& li {
+		padding-left: 20px;
+	}
 }
 
 .nutrition-table {
-	border-collapse: collapse; /* This property will remove the gaps between borders */
+	border-collapse: collapse;
+	/* This property will remove the gaps between borders */
 	width: 95%;
 	margin-inline: auto;
+
 	& td {
-		border-bottom: 1px solid var(--light-grey); /* Adjust the border size and color as needed */
-        padding-block: 0.5rem;
+		border-bottom: 1px solid var(--light-grey);
+		/* Adjust the border size and color as needed */
+		padding-block: 0.5rem;
 	}
 }
